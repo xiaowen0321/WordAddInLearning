@@ -241,5 +241,14 @@ namespace WordAddInLearning
             Globals.ThisAddIn.Application.ActiveDocument.Range(0, 7).Bookmarks.Add("测试书签");
             
         }
+
+        private void button2_Click(object sender, RibbonControlEventArgs e)
+        {
+            var selection = Globals.ThisAddIn.Application.Selection;
+            if (selection.Type == Word.WdSelectionType.wdSelectionNormal)
+            {
+                selection.Text = new string(selection.Text.ToCharArray().Reverse().ToArray());
+            }
+        }
     }
 }

@@ -36,8 +36,9 @@
         {
             this.tabLearning = this.Factory.CreateRibbonTab();
             this.group1 = this.Factory.CreateRibbonGroup();
-            this.button1 = this.Factory.CreateRibbonButton();
             this.editBox1 = this.Factory.CreateRibbonEditBox();
+            this.button1 = this.Factory.CreateRibbonButton();
+            this.button2 = this.Factory.CreateRibbonButton();
             this.tabLearning.SuspendLayout();
             this.group1.SuspendLayout();
             this.SuspendLayout();
@@ -52,19 +53,27 @@
             // 
             this.group1.Items.Add(this.editBox1);
             this.group1.Items.Add(this.button1);
+            this.group1.Items.Add(this.button2);
             this.group1.Label = "group1";
             this.group1.Name = "group1";
             // 
+            // editBox1
+            // 
+            this.editBox1.Label = "功能类型";
+            this.editBox1.Name = "editBox1";
+            this.editBox1.Text = null;
+            // 
             // button1
             // 
-            this.button1.Label = "button1";
+            this.button1.Label = "测试";
             this.button1.Name = "button1";
             this.button1.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button1_Click);
             // 
-            // editBox1
+            // button2
             // 
-            this.editBox1.Label = "editBox1";
-            this.editBox1.Name = "editBox1";
+            this.button2.Label = "文本倒序";
+            this.button2.Name = "button2";
+            this.button2.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button2_Click);
             // 
             // Ribbon1
             // 
@@ -86,6 +95,7 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup group1;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton button1;
         internal Microsoft.Office.Tools.Ribbon.RibbonEditBox editBox1;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton button2;
     }
 
     partial class ThisRibbonCollection
